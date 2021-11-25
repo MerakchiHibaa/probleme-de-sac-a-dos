@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mainstyle.css" type="text/css" />
+    <title>Le problème de sac à dos</title>
+</head>
+
+   <body>
+       <section>
+           <img src="tpgo_tp1\assets\sky.png"  id="sky">
+           <img src="tpgo_tp1\assets\sun3.png"  id="sun">
+          <!-- <img src="tpgo_tp1\assets\bluebag.png"  id="bag">-->
+
+           <img src="tpgo_tp1\assets\grass.png"  id="grass">
+            <h2 id="text"> Le problème de sac à dos </h2>
+       </section>
+       <script type="text/javascript"> 
+       let sky = document.getElementById("sky") ; 
+       let sun = document.getElementById("sun") ;
+       let grass = document.getElementById("grass") ;
+       let text = document.getElementById("text") ;
+window.addEventListener('scroll' , function() {
+    let value = window.scrollY ; 
+    sky.style.top = value *  + 'px' ;
+    sun.style.left = -value*0.5 + 'px' ; 
+   // kid.style.left = -value*0.15 + 'px' ; 
+    grass.style.top = value*0.15 + 'px' ; 
+    text.style.top = value*1 + 'px' ; 
+
+
+}) ;
+    
+    </script>
+
+    <div>
+        <p>
+            L’énoncé de ce problème fameux est simple : « Étant donné plusieurs objets possédant 
+chacun un poids et une valeur et étant donné un poids maximum pour le sac, quels objets 
+faut-il mettre dans le sac de manière à maximiser la valeur totale sans dépasser le poids 
+maximal autorisé pour le sac ? »
+Toute formulation de ce problème commence par un énoncé des données. Dans notre cas, 
+nous avons un sac à dos de poids maximal P et n objets. Pour chaque objet i, nous avons un 
+poids pi et une valeur vi.
+Pour quatre objets (n = 4) et un sac à dos d'un poids maximal de 30 kg (P = 30), nous avons 
+par exemple les données suivantes :
+        </p>
+    </div>
+
+   </body>
+</html>
