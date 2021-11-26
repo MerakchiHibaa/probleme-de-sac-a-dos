@@ -1,7 +1,7 @@
 body {
     background-color:#369 ;
     height: 100%;
-    overflow: hidden;
+  /*  overflow: hidden;*/
     font-family: 'Indie Flower', cursive;
     font-weight: bolder;
     font-size: larger;
@@ -38,7 +38,7 @@ body {
 
 .beebody{
     position: absolute;
-    top: 200px; /*250px*/
+    top: 250px; /*250px*/
     left: 250px;
     height: 85px;
     width: 75px;
@@ -54,7 +54,7 @@ body {
     position: absolute;
     height: 55px;
     width: 55px;
-    top: 160px; /*210px*/
+    top: 210px; /*210px*/
     left: 280px;
     transform: rotate(20deg);
     transform-origin: bottom right ;
@@ -84,7 +84,7 @@ body {
     position: absolute;
     height: 55px;
     width: 55px;
-    top: 155px;
+    top: 205px;
     left: 290px;
     transform: rotate(80deg);
     transform-origin: bottom right ;
@@ -110,7 +110,7 @@ body {
     position: absolute;
     height: 55px;
     width: 55px;
-    top: 205px;
+    top: 255px;
     left: 355px;
     transform: rotate(320deg);
     border-top-right-radius: 50%;
@@ -126,7 +126,7 @@ body {
     position: absolute;
     height: 25px;
     width: 25px;
-    top: 210px;
+    top: 260px;
     left: 250px;
     background-color: #eee;
     box-shadow: 20px 0 0 #eee;
@@ -138,7 +138,7 @@ body {
     position: absolute;
     height: 4px;
     width: 4px;
-    top: 13px;
+    top: 3px;
     left: 2px;
     background-color: #000;
     box-shadow: 20px 0 0 #000;
@@ -150,7 +150,7 @@ body {
     position: absolute;
     height: 30px;
     width: 30px;
-    top: 0px;
+    top: 50px;
     left: -150px;
     border-radius: 100%;
     box-shadow: 50px 50px 2px rgba(255, 255, 255, 0.95),
@@ -167,7 +167,7 @@ body {
     position: absolute;
     height: 60px;
     width: 60px;
-    top: 40px; /*0px*/
+    top: 0px; /*0px*/
     left: -950px;
     border-radius: 100%;
     box-shadow: 100px 200px 2px rgba(255, 255, 255, 0.95),
@@ -182,7 +182,7 @@ body {
     position: absolute;
     height: 100px; /*100px*/
     width: 100px;
-    top: 10px; /*200px*/
+    top: 200px; /*200px*/
     left: -950px;
     border-radius: 100%;
     box-shadow: 150px 200px 2px rgba(255, 255, 255, 0.95),
@@ -209,7 +209,7 @@ body {
         left: -150px;
     }
     100% {
-        left: 175%;
+        left: 100%;
     }
     
 }
@@ -223,6 +223,8 @@ h1 {
     font-family: 'Indie Flower', cursive;
     font-size: 4.5rem;
     font-weight: bolder;
+    text-align: center;
+
 }
 
 /*html {
@@ -236,20 +238,17 @@ h1 {
 
 
 #root{
+    z-index: 9999;
     width: 60%;
     height: 80%;
     margin: auto;
 
     position: relative;
-    top: 80px;
+    top: 150px;
     align-content: center;
    /* margin: auto;
 width: 60%;
 border: 5px solid #FFFF00;
 padding: 10px;*/
 
-}
-h1 {
-   
-    text-align: center;
 }
