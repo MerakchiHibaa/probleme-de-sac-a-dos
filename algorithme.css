@@ -32,3 +32,40 @@ h1 span {
 	width: 250px;
 	z-index: -1;
 }
+
+.sacados,
+.result {
+	font-size: 1.5rem;
+}
+.sacados span,
+.result span {
+	color: #e91e63;
+	font-weight: bold;
+}
+.objets {
+	padding: 1rem 0;
+}
+table,
+th,
+td,
+tr {
+	border: 1px solid black;
+}
+
+th,
+td {
+	padding: 0.5rem;
+	text-align: center;
+}
+.matrice {
+	padding: 1rem 0;
+}
+.matrice span {
+	font-size: 1.5rem;
+}
+.matrice table {
+	margin-top: 2rem;
+}
+table {
+	margin: auto;
+}
