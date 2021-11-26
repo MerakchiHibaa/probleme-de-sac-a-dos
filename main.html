@@ -1,54 +1,132 @@
 <!DOCTYPE html>
-<html>
-   
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="mainstyle.css" type="text/css" />
-    <title>Le problème de sac à dos</title>
-</head>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="mainstyle.css" type="text/css" />
+		<title>Le problème de sac à dos</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
-   <body>
-       <section>
-           <img src="assets\sky.png"  id="sky">
-           <img src="assets\sun3.png"  id="sun">
-          <!-- <img src="tpgo_tp1\assets\bluebag.png"  id="bag">-->
-
-           <img src="assets\grass.png"  id="grass">
-            <h2 id="text"> Le problème de sac à dos </h2>
-       </section>
-       <script type="text/javascript"> 
-       let sky = document.getElementById("sky") ; 
-       let sun = document.getElementById("sun") ;
-       let grass = document.getElementById("grass") ;
-       let text = document.getElementById("text") ;
-window.addEventListener('scroll' , function() {
-    let value = window.scrollY ; 
-    sky.style.top = value *  + 'px' ;
-    sun.style.left = -value*0.5 + 'px' ; 
-   // kid.style.left = -value*0.15 + 'px' ; 
-    grass.style.top = value*0.15 + 'px' ; 
-    text.style.top = value*1 + 'px' ; 
-
-
-}) ;
-    
-    </script>
-
-    <div>
-        <h1> Le problème de sac à dos : </h1>
-        <p>
-            L’énoncé de ce problème fameux est simple : « Étant donné plusieurs objets possédant 
-chacun un poids et une valeur et étant donné un poids maximum pour le sac, quels objets 
-faut-il mettre dans le sac de manière à maximiser la valeur totale sans dépasser le poids 
-maximal autorisé pour le sac ? »
-Toute formulation de ce problème commence par un énoncé des données. Dans notre cas, 
-nous avons un sac à dos de poids maximal P et n objets. Pour chaque objet i, nous avons un 
-poids pi et une valeur vi.
-Pour quatre objets (n = 4) et un sac à dos d'un poids maximal de 30 kg (P = 30), nous avons 
-par exemple les données suivantes :
-        </p>
-    </div>
-
-   </body>
+	<body>
+		<nav>
+			<ul>
+				<li>
+					<a href="/main.html">Accueil</a>
+				</li>
+				<li>
+					<a href="/algorithme.html">Algorithme</a>
+				</li>
+				<li>
+					<a href="/index.html">Déroulement</a>
+				</li>
+				<li>
+					<a href="/snow.html">Snow</a>
+				</li>
+				<li>
+					<a href="/bees.html">Bees</a>
+				</li>
+			</ul>
+		</nav>
+		<section class="links">
+			<img class="kid" src="images/kid.png" alt="kid" />
+			<ul>
+				<li>
+					<a href="/main.html">
+						<img src="icons/home.png" alt="home" />
+						<span>Accueil</span>
+					</a>
+				</li>
+				<li>
+					<a href="/algorithme.html">
+						<img src="icons/book.png" alt="book" />
+						<span>Algorithme</span>
+					</a>
+				</li>
+				<li>
+					<a href="/index.html">
+						<img src="icons/pen.png" alt="book" />
+						<span>Déroulement</span>
+					</a>
+				</li>
+				<li class="applications">
+					<a href="#">
+						<img src="assets/bluebag.png" alt="bag" />
+						<span>Applications</span>
+					</a>
+					<img class="arrow" src="icons/right-arrow.png" alt="" />
+					<div class="application-links">
+						<a href="/snow.html">
+							<img src="icons/snowing.png" alt="bag" />
+							<span>Snow</span>
+						</a>
+						<a href="/bees.html">
+							<img src="icons/bee.png" alt="bag" />
+							<span>Bees</span>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<div class="container">
+			<h1>Le problème de sac à dos :</h1>
+			<div class="description">
+				<p>
+					Soit un ensemble de n objets N={1,2,…,n} et un sac à dos pouvant
+					contenir un poids maximal de W. Chaque objet i a un poids w<sub
+						>i</sub
+					>
+					et un gain v<sub>i</sub>.
+					<br />
+					Le problème consiste à choisir un ensemble d’objets parmi les n
+					objets, au plus un de chaque, à mettre dans le sac à dos, de telle
+					manière à maximiser le gain total (des objets dans le sac), sans
+					dépasser la capacité du sac.
+					<br />
+					En termes mathématiques, nous avons ce qui suit :
+					<br />
+					<span style="color: #0275d8; font-weight: bold"
+						>max i=1 n (v<sub>i</sub> x<sub>i</sub> )
+						<br />
+						i=1 n (w<sub>i</sub> x<sub>i</sub> ) &lt;= W
+						<br />
+						x<sub>i</sub> = 0,1</span
+					>
+				</p>
+				<div class="image-wrapper">
+					<img src="assets/bluebag.png" id="bag" />
+				</div>
+			</div>
+		</div>
+		<footer>
+			TPGO TP1 Problème de sac à dos, Realisé par
+			<span>MARAKCHI Hiba (SIL1)</span> et
+			<span>FATMI Nassim (SIL2)</span>
+		</footer>
+		<script type="text/javascript">
+			let sky = document.getElementById("sky");
+			let sun = document.getElementById("sun");
+			let grass = document.getElementById("grass");
+			let text = document.getElementById("text");
+			window.addEventListener("scroll", function () {
+				let value = window.scrollY;
+				sky.style.top = value * +"px";
+				sun.style.left = -value * 0.5 + "px";
+				// kid.style.left = -value*0.15 + 'px' ;
+				grass.style.top = value * 0.15 + "px";
+				text.style.top = value * 1 + "px";
+			});
+			// this is for the applications button
+			const applicationsLink = document.querySelector(".applications > a");
+			applicationsLink.onclick = (e) => {
+				e.preventDefault();
+				const apps = document.querySelector(".applications .application-links");
+				apps.classList.toggle("show");
+			};
+		</script>
+	</body>
 </html>

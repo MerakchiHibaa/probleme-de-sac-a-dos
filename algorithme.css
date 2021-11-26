@@ -1,0 +1,34 @@
+body {
+	font-family: "Indie Flower", cursive;
+	font-weight: bolder;
+	font-size: larger;
+}
+section {
+	padding: 2rem 0;
+	text-align: center;
+	margin-top: 3rem;
+}
+.algo {
+	width: 800px;
+}
+h1 span {
+	color: #0275d8;
+}
+.desciption {
+	padding: 1rem 0;
+}
+.cartable {
+	position: absolute;
+	top: 50%;
+	left: 3%;
+	transform: translateY(-50%);
+	width: 200px;
+	z-index: -1;
+}
+.kids {
+	position: absolute;
+	top: 80%;
+	right: 3%;
+	width: 250px;
+	z-index: -1;
+}
