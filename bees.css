@@ -2,6 +2,9 @@ body {
     background-color:#369 ;
     height: 100%;
     overflow: hidden;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bolder;
+    font-size: larger;
 
 }
 
@@ -211,3 +214,42 @@ body {
     
 }
 
+
+
+
+/****************************************************************************************************************/
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 4.5rem;
+    font-weight: bolder;
+}
+
+/*html {
+    
+
+    background-position: center;
+   /* background-attachment: fixed;
+    background-size: contain;
+   
+}*/
+
+
+#root{
+    width: 60%;
+    height: 80%;
+    margin: auto;
+
+    position: relative;
+    top: 80px;
+    align-content: center;
+   /* margin: auto;
+width: 60%;
+border: 5px solid #FFFF00;
+padding: 10px;*/
+
+}
+h1 {
+   
+    text-align: center;
+}
