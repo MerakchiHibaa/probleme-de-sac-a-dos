@@ -1,0 +1,19 @@
+h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 4.5rem;
+    font-weight: bolder;
+}
+
+html {
+    
+    background-image: url('812.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: contain;
+}
+body {
+    font-family: 'Indie Flower', cursive;
+    font-weight: bolder;
+    font-size: larger;
+    background:rgba(255,255,255,0.5); /* applies a 50% transparent white background */
+}

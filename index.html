@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Le probleme de sac à dos</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mb-4 justify-content-center">
+            <h1>Problème du sac à dos</h1>
+        </div>
+        <div class="row">
+            <div id="root" class="col-md-6">
+                <div class="form-group my-4">
+                    <label for="poids_maximum">Entrer le poids maximale</label>
+                    <input type="number" v-model="poids_maximum" class="form-control" aria-describedby="helpId"
+                        placeholder="">
+                    <small id="helpId" class="form-text text-muted">Le poids maximale que le sac à dos peut
+                        contenir.</small>
+                </div>
+                <div class="form-row my-4">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">Nom</label>
+                        <input v-model="nom" type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputState">Poids</label>
+                        <input v-model="poids" type="number" class="form-control" id="inputState">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Valeur</label>
+                        <input v-model="valeur" type="number" class="form-control" id="inputZip">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="">Ajouter</label>
+                        <button class="btn btn-outline-primary" @click="addObject"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <ul class="list-group" style="width : 100%">
+                        <li v-for="object in objects"
+                            class="list-group-item d-flex justify-content-between align-items-center">
+                            {{object.nom}}
+                            <span class="badge badge-primary badge-pill">Poids: {{object.poids}}</span>
+                            <span class="badge badge-primary badge-pill">Valeur: {{object.valeur}}</span>
+                            <button class="btn btn-outline-danger btn-sm" @click="deleteObject(object.id)"><i
+                                    class="fa fa-trash"></i></button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row my-4">
+                    <button @click="knapsack" type="button" class="btn btn-primary btn-block btn-lg"><i
+                            class="fa fa-"></i>Valider</button>
+                </div>
+                <div class="row my-4 justify-content-center">
+                    <div id="result" style="display: none;" class="alert alert-primary font-weight-bold" role="alert">
+                        {{'La valeur maximale est '+this.valeur_maximum}}
+                    </div>
+
+                </div>
+                <div class="row my-4 justify-content-center">
+                    <div id="result2" style="display: none;" class="alert alert-primary font-weight-bold" role="alert">
+                        {{'La liste des objets est : '+this.listeObjets.join(' , ')}}
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row justify-content-center">
+                    <img src="blue_one.png" style="width: 70%;">
+                </div>
+                <style>
+                    .bg {
+                        background-image: url('./blue_one.png');
+                        background-position: center;
+                        background-attachment: fixed;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                </style>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
